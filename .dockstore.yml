@@ -1,7 +1,6 @@
 version: 1.2
 workflows:
-   - name: github.com/pathogen-genomics/usher-public-workflow/publicTreeSamplePlacement
-     subclass: WDL
+   - subclass: WDL
      publish: True
      primaryDescriptorPath: /publicTreeSamplePlacement.wdl
      testParameterFiles: <String Array>
