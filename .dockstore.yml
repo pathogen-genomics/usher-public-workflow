@@ -1,6 +1,6 @@
 version: 1.2
 workflows:
-   - name: publicTreeSamplePlacement
+   - name: pathogen-genomics/usher-public-workflow/publicTreeSamplePlacement
      subclass: WDL
      publish: True
      primaryDescriptorPath: /publicTreeSamplePlacement.wdl
