@@ -3,7 +3,6 @@ workflows:
    - subclass: WDL
      publish: True
      primaryDescriptorPath: /publicTreeSamplePlacement.wdl
-     testParameterFiles: <String Array>
      authors:
        - name: Marc Perry
          email: madperry@ucsc.edu
