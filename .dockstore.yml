@@ -8,4 +8,5 @@ workflows:
          email: madperry@ucsc.edu
          affiliation: University of California, Santa Cruz
      filters:
-       branches: main
+       branches: 
+         - main
