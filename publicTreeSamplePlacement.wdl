@@ -239,6 +239,7 @@ task extractSubtrees {
         cpu:    threads
         memory: mem_size +" GB"
         disks:  "local-disk " + diskSizeGB + " SSD"
+        maxRetries: 3
     }   
 }
 
