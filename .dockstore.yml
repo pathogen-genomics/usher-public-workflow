@@ -1,6 +1,7 @@
 version: 1.2
 workflows:
-   - subclass: WDL
+   - name: publicTreeSamplePlacement
+     subclass: WDL
      publish: True
      primaryDescriptorPath: /publicTreeSamplePlacement.wdl
      authors:
