@@ -120,7 +120,7 @@ task alignSeqs {
         memory:      mem_size + " GB"
         cpu:         cpus
         disks:       "local-disk 750 LOCAL"
-        preemptible: 0 # what is this? should I add this to all of my runtimes?
+        preemptible: 0
     }
     output {
         File aligned_sequences = "aligned.fasta"
@@ -267,6 +267,7 @@ task taxodium {
         cpu:    threads
         memory: mem_size +" GB"
         disks:  "local-disk " + diskSizeGB + " SSD"
+        maxRetries: 3
     }   
 }
 
