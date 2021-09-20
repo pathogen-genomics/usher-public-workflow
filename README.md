@@ -22,8 +22,11 @@ The output files that often get used the most are located in the extractSubtrees
 ## Workflow Details
 ### Sequence of steps in this Workflow
 #### Pass in name and path to fasta sequence file
+This is the only required file that the user must supply to run the publicTreeSamplePlacement Workflow.  Each sequence must have a unique fasta header preceding it, where the first character on the header line is '>'.  The file can contain one SARS-CoV-2 consensus fasta sequence, up to thousands.
 #### Get publicly available sequence files
+These five files are required by UShER and the other tools for the various steps.  One of them is static, two of them are more stable, and two of them change every night
 #### Align user fasta sequences with SARS-CoV-2 RefSeq
+The maftt multiple sequence aligner is used at this step.  It is relatively rapid for such short genomes.  This step makes sure that all of the sequences are the same length as the SARS-CoV-2 RefSeq, in preparation for the next step.
 #### Create a VCF file of all the variants from the aligned user sequences
 #### Place user sequences on the Phylogenetic Tree built from public sequence databases
 #### Annotate the resulting amino acid changes from each variant
