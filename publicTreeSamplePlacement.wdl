@@ -62,10 +62,10 @@ workflow publicTreeSamplePlacement {
     }
 }
 
-# IDEA: Let's make one task, that grabs all of the files that we need?
+# These five files are required for UShER.  One of them is static, two of them are more stable, and two of them change every night.
 task getFiles {
     meta { 
-        description: "These five files are required for UShER.  One of them is static, two of them are more stable, and two of them change every night."
+        description: "Uses tools in the UShER tree builder to place user consensus fasta sequence files onto a SARS-CoV-2 phylogenetic tree built from publicly accessible databases"
     }
     command {
         # Download the SARS-CoV-2 Reference Sequence fasta file
