@@ -17,8 +17,14 @@ Depending on the number of samples (sequences) in your input fasta file a run wi
 ## Output Data Files
 As currently configured, to use the filepath specification to provide the input, all of the output files are located in the Execution Directory of their respective task.  The new phylogenetic tree, named 'user_seqs.pb' is located in the Execution Directory of the usher task.  By itself this file may have limited usefulness.  One of the tasks named 'taxodium' uses the matUtils tools to reformat the user_seqs.pb file into one named 'user_seqs.taxodium.pb', which is in the taxodium Execution Directory.  After downloading and saving this file to your localhost you can upload it into the taxodium visualization website located at https://cov2tree.org/. Just click on the 'Choose File' button and it will open a file selector widget and let you upload the new tree containing your sequences placed on the public BigTree.
 
-The output files that often get used the most are located in the extractSubtrees Execution Directory on Terra.  There is a TSV table produced by the matUtils tool which lists your samples and and the name of the extracted subtree which shows it's 500 nearest neighbours, as well as related metadata.  The subtree.json files are located in a subdirectory whose name begins 'glob-xxxxxx'.  After downloading those JSON renditions of the subtree you can upload individual examples to Nextstrain's Auspice Tree Viewer, located here: https://auspice.us/  In Auspice there are many different options that you can set that lets you view and label the subtree using different facets.
+The output files that often get used the most are located in the extractSubtrees Execution Directory on Terra.  There is a TSV table, named subtree-assignments.tsv, produced by the matUtils tool which lists your samples and and the name of the extracted subtree which shows it's 500 nearest neighbours, as well as related metadata.  The subtree.json files are located in a subdirectory whose name begins 'glob-xxxxxx'.  
 
+![image](https://user-images.githubusercontent.com/1062689/134108736-366f7a6e-c6ce-45eb-a14b-bed3c7170640.png)
+
+![image](https://user-images.githubusercontent.com/1062689/134108483-5cd7f2e7-cbb0-4072-9b24-7e4de106c535.png)
+After downloading those JSON renditions of the subtree you can upload individual examples to Nextstrain's Auspice Tree Viewer, located here: https://auspice.us/  In Auspice there are many different options that you can set that lets you view and label the subtree using different facets, as shown in this example:
+
+![image](https://user-images.githubusercontent.com/1062689/134108100-ccebf065-08ce-4081-a0a1-29700022712c.png)
 ## Workflow Details
 ### Sequence of steps in this Workflow
 #### Pass in name and path to fasta sequence file
